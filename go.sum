@@ -1,2 +1,4 @@
 github.com/tobiashort/ansi v0.0.0-20250416201302-7f32a30d024d h1:fRlgbWGhXjTW+a21e/l/N62IDabBAo8McEM3Uz3ksrE=
 github.com/tobiashort/ansi v0.0.0-20250416201302-7f32a30d024d/go.mod h1:b2WFClnpZoiubreCPu38KwTIBZIMxFTuejr1fsQL9U8=
+github.com/tobiashort/cfmt v0.0.0-20250417053541-b0e7c089916d h1:TwIEZ3LLoGBGsNTQKZq8ePSL60MeWfMuuEA1avFLsTw=
+github.com/tobiashort/cfmt v0.0.0-20250417053541-b0e7c089916d/go.mod h1:DyJ+830o6ZI44P9SRnnt65TwhwafIHxc0wOMZQ0KH4Q=

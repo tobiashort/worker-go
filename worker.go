@@ -1,8 +1,9 @@
 package worker
 
 import (
-	"fmt"
 	"strings"
+
+	"github.com/tobiashort/cfmt"
 )
 
 type Worker interface {
@@ -23,13 +24,13 @@ func (w *worker) Done() {
 }
 
 func (w *worker) Printf(format string, args ...any) {
-	w.msg = fmt.Sprintf(format, args...)
+	w.msg = cfmt.Sprintf(format, args...)
 	w.msg = strings.TrimSpace(w.msg)
 	w.pool.print(w)
 }
 
 func (w *worker) Logf(format string, args ...any) {
-	w.msg = fmt.Sprintf(format, args...)
+	w.msg = cfmt.Sprintf(format, args...)
 	w.msg = strings.TrimSpace(w.msg)
 	w.pool.log(w)
 }
