@@ -71,7 +71,7 @@ func (p *pool) print(w *worker) {
 	p.mutex.Lock()
 	defer p.mutex.Unlock()
 	capLen := len(strconv.Itoa(p.cap))
-	prefixFmt := fmt.Sprintf("[worker %%%dd] ", capLen)
+	prefixFmt := fmt.Sprintf("[Worker %%%dd] ", capLen)
 	fmt.Print(ansi.MoveCursorDown(w.num))
 	fmt.Print(ansi.EraseEntireLine)
 	fmt.Printf(prefixFmt, w.num)
