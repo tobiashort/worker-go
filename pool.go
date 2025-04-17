@@ -84,6 +84,7 @@ func (p *pool) log(w *worker) {
 	p.mutex.Lock()
 	fmt.Print(ansi.EraseEntireLine)
 	fmt.Printf("%s\n", w.msg)
+	w.msg = ""
 	for range p.cap {
 		fmt.Print(ansi.EraseEntireLine)
 		fmt.Println()
