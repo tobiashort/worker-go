@@ -1,10 +1,6 @@
 github.com/tobiashort/ansi v0.0.0-20250416201302-7f32a30d024d h1:fRlgbWGhXjTW+a21e/l/N62IDabBAo8McEM3Uz3ksrE=
 github.com/tobiashort/ansi v0.0.0-20250416201302-7f32a30d024d/go.mod h1:b2WFClnpZoiubreCPu38KwTIBZIMxFTuejr1fsQL9U8=
-github.com/tobiashort/cfmt v0.0.0-20250417053541-b0e7c089916d h1:TwIEZ3LLoGBGsNTQKZq8ePSL60MeWfMuuEA1avFLsTw=
-github.com/tobiashort/cfmt v0.0.0-20250417053541-b0e7c089916d/go.mod h1:DyJ+830o6ZI44P9SRnnt65TwhwafIHxc0wOMZQ0KH4Q=
-github.com/tobiashort/isatty v0.0.0-20250418132835-4b46a376688b h1:y7mn0rxY+ro+i1fXb9vo0NSLRtbMPRKMwTtM8gXuJNw=
-github.com/tobiashort/isatty v0.0.0-20250418132835-4b46a376688b/go.mod h1:owWnfksJ7ex/zNs38gqmqyKJ7JcmT7qbGOC08Dvvi8U=
-golang.org/x/sys v0.32.0 h1:s77OFDvIQeibCmezSnk/q6iAfkdiQaJi4VzroCFrN20=
-golang.org/x/sys v0.32.0/go.mod h1:BJP2sWEmIv4KK5OTEluFJCKSidICx8ciO85XgH3Ak8k=
-golang.org/x/term v0.31.0 h1:erwDkOK1Msy6offm1mOgvspSkslFnIGsFnxOKoufg3o=
-golang.org/x/term v0.31.0/go.mod h1:R4BeIy7D95HzImkxGkTW1UQTtP54tio2RyHz7PwK0aw=
+github.com/tobiashort/cfmt v0.0.0-20250418181817-0d9f7fa8b5c6 h1:OAODi1fvqg7GKrvPql6WFeIxzg5r9DHLUi28cUr0Izc=
+github.com/tobiashort/cfmt v0.0.0-20250418181817-0d9f7fa8b5c6/go.mod h1:Qg1gSTQyv3Xdb8bbpStMX8YjJFYuxVupr5U+Vm+bEHo=
+github.com/tobiashort/isatty v0.0.0-20250418181654-926c43b7f44f h1:R/cAaEExUfPbl39tQoWEmMp2+qtvA9IwIIPyI45Rp0c=
+github.com/tobiashort/isatty v0.0.0-20250418181654-926c43b7f44f/go.mod h1:KqRjpp4GPCJ4koQ9sva+8Qn04UXw/4xbHxo50KEN+fo=
