@@ -1,13 +1,9 @@
 # github.com/tobiashort/ansi v0.0.0-20250416201302-7f32a30d024d
 ## explicit; go 1.24.1
 github.com/tobiashort/ansi
-# github.com/tobiashort/cfmt v0.0.0-20250418181817-0d9f7fa8b5c6
+# github.com/tobiashort/cfmt v0.0.0-20250419072841-9ad53823ae44
 ## explicit; go 1.24.2
 github.com/tobiashort/cfmt
-# github.com/tobiashort/isatty v0.0.0-20250418181654-926c43b7f44f
+# github.com/tobiashort/isatty v0.0.0-20250419072540-9a4b01f48059
 ## explicit; go 1.24.2
 github.com/tobiashort/isatty
-# golang.org/x/sys v0.32.0
-## explicit; go 1.23.0
-# golang.org/x/term v0.31.0
-## explicit; go 1.23.0
