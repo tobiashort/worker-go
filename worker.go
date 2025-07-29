@@ -3,7 +3,7 @@ package worker
 import (
 	"strings"
 
-	"github.com/tobiashort/cfmt"
+	"github.com/tobiashort/cfmt-go"
 )
 
 type Worker interface {

@@ -4,7 +4,7 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/tobiashort/worker"
+	"github.com/tobiashort/worker-go"
 )
 
 func main() {

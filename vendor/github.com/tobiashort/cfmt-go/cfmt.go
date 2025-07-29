@@ -6,8 +6,8 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/tobiashort/ansi"
-	"github.com/tobiashort/isatty"
+	"github.com/tobiashort/ansi-go"
+	"github.com/tobiashort/isatty-go"
 )
 
 var regexps = map[*regexp.Regexp]ansi.Color{

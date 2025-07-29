@@ -5,8 +5,8 @@ import (
 	"strconv"
 	"sync"
 
-	"github.com/tobiashort/ansi"
-	"github.com/tobiashort/isatty"
+	"github.com/tobiashort/ansi-go"
+	"github.com/tobiashort/isatty-go"
 )
 
 type Pool interface {
