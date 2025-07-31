@@ -18,6 +18,7 @@ type pool struct {
 	cap     int
 	workers []*worker
 	mutex   sync.Mutex
+	wg      sync.WaitGroup
 }
 
 func NewPool(cap int) Pool {
@@ -25,6 +26,7 @@ func NewPool(cap int) Pool {
 	pool.cap = cap
 	pool.workers = make([]*worker, cap)
 	pool.mutex = sync.Mutex{}
+	pool.wg = sync.WaitGroup{}
 	if isatty.IsTerminal() {
 		for range cap {
 			fmt.Print(ansi.EraseEntireLine)
@@ -45,31 +47,26 @@ func NewPool(cap int) Pool {
 }
 
 func (p *pool) GetWorker() Worker {
-	i := 0
 	for {
-		mod := i % p.cap
-		worker := p.workers[mod]
-		if worker.done {
-			worker.done = false
-			return worker
+		for _, worker := range p.workers {
+			if worker.done {
+				worker.done = false
+				p.wg.Add(1)
+				return worker
+			}
 		}
-		i++
 	}
 }
 
 func (p *pool) Wait() {
-	for {
-		allDone := true
-		for _, w := range p.workers {
-			allDone = allDone && w.done
-		}
-		if allDone {
-			break
-		}
-	}
+	p.wg.Wait()
 	if isatty.IsTerminal() {
 		fmt.Print(ansi.EraseFromCursorToEndOfScreen)
 	}
+}
+
+func (p *pool) done() {
+	p.wg.Done()
 }
 
 func (p *pool) print(w *worker) {

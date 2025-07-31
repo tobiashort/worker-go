@@ -21,6 +21,7 @@ type worker struct {
 
 func (w *worker) Done() {
 	w.done = true
+	w.pool.done()
 }
 
 func (w *worker) Printf(format string, args ...any) {
