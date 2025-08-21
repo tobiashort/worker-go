@@ -14,7 +14,6 @@ func main() {
 		worker := pool.GetWorker()
 		worker.Go(
 			func() {
-				time.Sleep(time.Duration(rand.Intn(5)) * time.Second)
 				worker.Printf("%d: started", i)
 				time.Sleep(time.Duration(rand.Intn(5)) * time.Second)
 				worker.Printf("%d: processing", i)
