@@ -3,7 +3,7 @@ module github.com/tobiashort/worker-go
 go 1.24
 
 require (
-	github.com/tobiashort/ansi-go v0.0.0-20250729191540-72438c61f4ff
-	github.com/tobiashort/cfmt-go v0.0.0-20250729192009-75c817e11e2c
-	github.com/tobiashort/isatty-go v0.0.0-20250729191520-f567daa300f4
+	github.com/tobiashort/ansi-go v0.0.0-20250816044101-514d44e7de80
+	github.com/tobiashort/cfmt-go v0.0.0-20250816044318-5ab05204143b
+	github.com/tobiashort/isatty-go v0.0.0-20250729193227-00bbda39413c
 )

@@ -12,15 +12,15 @@ func main() {
 
 	for i := range 20 {
 		worker := pool.GetWorker()
-		go func() {
-			time.Sleep(time.Duration(rand.Intn(5)) * time.Second)
-			worker.Printf("%d: started", i)
-			time.Sleep(time.Duration(rand.Intn(5)) * time.Second)
-			worker.Printf("%d: processing", i)
-			time.Sleep(time.Duration(rand.Intn(5)) * time.Second)
-			worker.Logf("%d: done", i)
-			worker.Done()
-		}()
+		worker.Go(
+			func() {
+				time.Sleep(time.Duration(rand.Intn(5)) * time.Second)
+				worker.Printf("%d: started", i)
+				time.Sleep(time.Duration(rand.Intn(5)) * time.Second)
+				worker.Printf("%d: processing", i)
+				time.Sleep(time.Duration(rand.Intn(5)) * time.Second)
+				worker.Logf("%d: done", i)
+			})
 	}
 
 	pool.Wait()

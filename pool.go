@@ -32,7 +32,7 @@ func NewPool(cap int) Pool {
 			fmt.Print(ansi.EraseEntireLine)
 			fmt.Println()
 		}
-		fmt.Print(ansi.MoveCursorUp(pool.cap))
+		fmt.Print(ansi.CursorMoveUp(pool.cap))
 	}
 	for i := range cap {
 		pool.workers[i] = &worker{
@@ -75,12 +75,12 @@ func (p *pool) print(w *worker) {
 		defer p.mutex.Unlock()
 		capLen := len(strconv.Itoa(p.cap))
 		prefixFmt := fmt.Sprintf("[Worker %%%dd] ", capLen)
-		fmt.Print(ansi.MoveCursorDown(w.num))
+		fmt.Print(ansi.CursorMoveDown(w.num))
 		fmt.Print(ansi.EraseEntireLine)
 		fmt.Printf(prefixFmt, w.num)
 		fmt.Print(w.msg)
-		fmt.Print(ansi.MoveCursorToColumn(0))
-		fmt.Print(ansi.MoveCursorUp(w.num))
+		fmt.Print(ansi.CursorMoveToColumn(0))
+		fmt.Print(ansi.CursorMoveUp(w.num))
 	}
 }
 
@@ -96,7 +96,7 @@ func (p *pool) log(w *worker) {
 			fmt.Print(ansi.EraseEntireLine)
 			fmt.Println()
 		}
-		fmt.Print(ansi.MoveCursorUp(p.cap))
+		fmt.Print(ansi.CursorMoveUp(p.cap))
 	}
 	p.mutex.Unlock()
 	for _, w := range p.workers {
